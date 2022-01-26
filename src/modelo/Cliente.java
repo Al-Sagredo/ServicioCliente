@@ -6,17 +6,22 @@ public class Cliente {
 	private String nombreCliente;
 	private String apellidoCliente;
 	private String aniosCliente;
-	CategoriaEnum nombreCategoria;
-	
-	//constructor
-	public Cliente(String runCliente, String nombreCliente, String apellidoCliente, String aniosCliente,
-			CategoriaEnum nombreCategoria) {
+	private CategoriaEnum nombreCategoria;
+
+	// constructor
+	public Cliente(String runCliente, String nombreCliente, String apellidoCliente, String aniosCliente, CategoriaEnum nombreCategoria) {
+			// este constructor se usa en el metodo agregarcliente
+			
 		super();
 		this.runCliente = runCliente;
 		this.nombreCliente = nombreCliente;
 		this.apellidoCliente = apellidoCliente;
 		this.aniosCliente = aniosCliente;
 		this.nombreCategoria = nombreCategoria;
+	}
+
+	public Cliente() {
+		
 	}
 
 	public String getRunCliente() {
@@ -61,12 +66,8 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [runCliente=" + runCliente + ", nombreCliente=" + nombreCliente + ", apellidoCliente="
-				+ apellidoCliente + ", aniosCliente=" + aniosCliente + ", nombreCategoria=" + nombreCategoria + "]";
+				return  "\nRUN del Cliente: " + runCliente + "\nNombre del Cliente: " + nombreCliente + "\nApellido del Cliente: "
+						+ apellidoCliente + "\nAños como Cliente: " + aniosCliente + "\nCategoría del cliente: " + nombreCategoria  ;
 	}
-	
-	
-	
-	
-	
+
 }
